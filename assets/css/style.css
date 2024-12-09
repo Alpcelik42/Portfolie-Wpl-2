@@ -223,3 +223,66 @@ header.navbar nav ul li a:hover {
     color: #fff;
     border: 2px solid #fff;
 }
+
+
+/* Algemene layout voor mijn verhaal */
+.story-header {
+    background-color: #4a0000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.story-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.story-header p {
+    font-size: 1.2rem;
+}
+
+/* Story-secties */
+.story-sections {
+    background-color: #5c0000;
+    color: #fff;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.story-block {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+}
+
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    background-color: #8b0000;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.story-text {
+    max-width: 700px;
+}
+
+.story-text h2 {
+    font-size: 1.5rem;
+    color: #ffcccb;
+    margin-bottom: 0.5rem;
+}
+
+.story-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
