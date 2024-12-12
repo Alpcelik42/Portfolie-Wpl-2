@@ -286,3 +286,145 @@ header.navbar nav ul li a:hover {
     font-size: 1rem;
     line-height: 1.5;
 }
+
+
+
+/* Work & Education Modern Styling */
+.education-work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, #5c0000, #8b0000);
+    color: #fff;
+}
+
+.education-work h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.work-column, .education-column {
+    flex: 1;
+    min-width: 300px;
+    background: #4a0000;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.work-column h3, .education-column h3 {
+    font-size: 1.8rem;
+    color: #ffcccb;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ffcccb;
+    padding-bottom: 0.5rem;
+}
+
+.work-column ul, .education-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.work-column ul li, .education-column ul li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.work-column ul li strong, .education-column ul li strong {
+    color: #ffcccb;
+}
+
+.work-column ul li span, .education-column ul li span {
+    display: block;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+
+
+/* Stijl voor de Creaties-pagina */
+.creaties-container {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.creaties-header {
+    font-size: 2.5rem;
+    color: #cc0000;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #cc0000;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.project-card .project-image {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.contact-section {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+
