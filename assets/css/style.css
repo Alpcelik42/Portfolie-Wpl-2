@@ -426,5 +426,80 @@ header.navbar nav ul li a:hover {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
+.icon-carousel {
+    display: flex;
+    overflow: hidden; /* Verberg de inhoud buiten de container */
+    position: relative;
+    width: 100%; /* Volledige breedte van de container */
+    height: 100px; /* Pas aan naar gewenste hoogte */
+}
+
+.icon-carousel-inner {
+    display: flex;
+    animation: scroll 10s linear infinite; /* Naadloze scrollanimatie */
+}
+
+.icon-carousel-inner img {
+    width: 100px; /* Pas aan voor de grootte van de afbeeldingen */
+    height: auto;
+    object-fit: contain;
+    margin: 0 40px; /* Optionele ruimte tussen afbeeldingen */
+}
+
+/* Animatie voor naadloze scroll */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.tools-info {
+    display: grid; /* Gebruik een grid-layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsieve kolommen */
+    gap: 20px; /* Afstand tussen kolommen */
+    padding: 20px; /* Ruimte rondom de sectie */
+    background-color: #f9f9f9; /* Lichte achtergrondkleur */
+    margin-top: 20px;
+}
+
+.tool-column {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-column img {
+    width: 80px; /* Icon grootte */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tool-column h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.tool-column p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.tool-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
