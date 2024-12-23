@@ -348,14 +348,14 @@ header.navbar nav ul li a:hover {
 
 /* Stijl voor de Creaties-pagina */
 .creaties-container {
-    background-color: #f9f9f9;
+    background-color: #931c1c;
     padding: 3rem 1rem;
     text-align: center;
 }
 
 .creaties-header {
     font-size: 2.5rem;
-    color: #cc0000;
+    color: #ffffff;
     margin-bottom: 2rem;
 }
 
@@ -586,6 +586,24 @@ header.navbar nav ul li a:hover {
     color: #cc0000;
     border: 2px solid #cc0000;
 }
+
+/* Styling voor de afbeeldingen naast de tekst */
+.circle-img {
+    width: 180px; /* Verhoog de breedte naar 150px (of groter) */
+    height: 180px; /* Verhoog de hoogte naar 150px (of groter) */
+    border-radius: 50%; /* Zorgt dat de cirkel rond blijft */
+    overflow: hidden; /* Houdt de afbeelding binnen de cirkel */
+    flex-shrink: 0; /* Voorkomt dat de afbeelding krimpt */
+}
+
+
+.circle-img img {
+    width: 100%; /* Maakt de afbeelding responsief binnen de cirkel */
+    height: 100%;
+    object-fit: cover; /* Zorgt dat de afbeelding mooi wordt geschaald */
+}
+
+
 
 
 
