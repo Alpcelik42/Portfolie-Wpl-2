@@ -2,13 +2,13 @@
 # Startrepository WPL1 24-25 voor DVO
 
 # Naam
-Jouw Naam
+Ozcelik Alperen
 
 # Studenten-nummer
-Studenten-nummer
+1240
 
 # Klas
-Jouw klas
+1DVO-A
 
 # Bronnen
 - Bron 1, website
