@@ -55,6 +55,7 @@ header.navbar nav ul li a:hover {
 
 .hero-text {
     max-width: 50%;
+
 }
 
 .hero-text h1 {
@@ -698,7 +699,7 @@ header.navbar nav ul li a:hover {
 }
 
 .favoriete-tool img {
-    width: 60px; /* Pas dit aan naar wens */
+    width: 60px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -714,6 +715,90 @@ header.navbar nav ul li a:hover {
     padding: 3px 8px;
     border-radius: 50%;
 }
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#scrollToTopBtn:hover {
+    background-color: #555;
+}
+
+
+.hero-content {
+    display: flex; /* Zet alles op één lijn */
+    align-items: center; /* Verticale uitlijning */
+    justify-content: space-between; /* Ruimte tussen tekst en foto */
+    flex-wrap: wrap; /* Zorg dat het responsive blijft */
+}
+
+.hero-text {
+    flex: 1; /* Geef de tekst de helft van de ruimte */
+    padding-right: 20px; /* Maak ruimte aan de rechterkant */
+    text-align: left; /* Zorg dat tekst links uitgelijnd is */
+}
+
+.profile-photo {
+    width: 300px; /* Pas deze waarde aan aan jouw gewenste grootte */
+    height: 300px; /* Zorg dat de hoogte in verhouding blijft */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Houdt de afbeelding binnen de container */
+    border-radius: 50%; /* Voor een ronde afbeelding */
+    margin: 0 auto; /* Centreer de afbeelding horizontaal */
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding de ruimte vult zonder vervorming */
+    object-position: center; /* Centreert de afbeelding binnen het kader */
+}
+
+.download-cv {
+    margin: 50px 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.cv-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv-text h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #aa5353;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+
 
 
 
