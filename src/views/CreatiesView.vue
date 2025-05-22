@@ -247,7 +247,7 @@
             <div class="deliverable-links">
               <a href="https://github.com/PXL-WPL2-2425/wpl2-frontend-team_10.git" class="deliverable-link">Bekijk Live Website</a>
               <a href="#" class="deliverable-link">Download Documentatie</a>
-              <a href="#" class="deliverable-link" download>Bekijk Presentatie</a>
+              <a href="../assets/projecten/E-taalent%20pitch%20&%20demo.pptx" class="deliverable-link" download="E-taalent_pitch_&_demo.pptx">Bekijk Presentatie</a>
             </div>
           </div>
         </div>
