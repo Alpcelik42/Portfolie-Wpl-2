@@ -9,6 +9,7 @@
           @mouseenter="hoverCategory('wpl1')"
           @mouseleave="resetHover"
         >
+
           <h2>WPL1 Projecten</h2>
           <p>Schoolprojecten uit het eerste trimester</p>
           <div class="hover-effect" :class="{ active: hoverState === 'wpl1' }"></div>
