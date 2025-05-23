@@ -454,6 +454,13 @@ export default {
               download: true
             }
           ]
+        },
+        {
+          id: 7,
+          title: 'BCS Butterfly Logo Ontwerp',
+          description: 'Ik heb een modern en herkenbaar logo ontworpen voor BCS Butterfly, een lokaal Voedselfabrikant. Het logo moest zowel elegant als tijdloos zijn, met een subtiele verwijzing naar een vlinder (Butterfly) in het ontwerp. Na verschillende iteraties en feedbackrondes met de klant, is het eindresultaat een minimalistisch logo geworden dat goed werkt op zowel kleine als grote schaal. Het logo is geoptimaliseerd voor verschillende toepassingen, zoals visitekaartjes, verpakkingen en digitale media.',
+          technologies: 'Adobe Photoshop, Canva, Figma',
+          image: 'bcs.png',
         }
       ]
     }
