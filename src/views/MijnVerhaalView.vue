@@ -196,14 +196,19 @@ export default {
 
     const experience = ref([
       { period: '2020-2021', title: 'Corendon', description: 'Loader en boarding agent' },
-      { period: '2021-2022', title: 'Corendon', description: 'Stewardess' }
+      { period: '2021-2022', title: 'Corendon', description: 'Stewardess' },
+      { period: '2022-2024', title: 'Corendon', description: 'Co-Piloot' }
     ])
 
-    const downloadCV = () => {
-      // Hier zou je normaal een PDF downloaden
-      // Voor nu simuleren we het met een alert
-      alert('CV download zou nu starten')
+    function downloadCV() {
+      const link = document.createElement('a')
+      link.href = 'public/projecten/ozcelik_alperen_cv.pdf' // Let op: géén 'public' in de URL
+      link.download = 'ozcelik_alperen_cv.pdf'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
     }
+
 
     onMounted(() => {
       // Hero animatie
