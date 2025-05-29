@@ -5,9 +5,11 @@
       <div class="container">
         <div class="hero-content">
           <div class="text-content" ref="textContent">
-            <h1 class="welcome-text">Welkom!</h1>
+            <h1 class="welcome-text">{{ typedWelcome }}</h1>
             <p class="intro-text">
-              Ik ben Alperen Ozcelik, een professionele Web Developer met een passie voor het creëren van uitzonderlijke websites die opvallen.
+              <span v-for="(char, index) in typedIntro" :key="index" :style="{ opacity: introOpacity[index] }">
+                {{ char }}
+              </span>
             </p>
             <button @click="navigateTo('story')" class="story-button">
               Mijn Verhaal
@@ -39,11 +41,11 @@
         <h2 class="section-title">Mijn Expertise</h2>
         <div class="expertise-grid">
           <div
-            v-for="(expertise, index) in expertises"
-            :key="index"
-            class="expertise-item"
-            @mouseenter="hoverExpertise(index)"
-            @mouseleave="resetExpertise"
+              v-for="(expertise, index) in expertises"
+              :key="index"
+              class="expertise-item"
+              @mouseenter="hoverExpertise(index)"
+              @mouseleave="resetExpertise"
           >
             <div class="expertise-icon" :style="{ backgroundColor: expertise.color }">
               {{ expertise.emoji }}
@@ -61,13 +63,13 @@
         <p class="creations-intro">Hier zijn enkele van mijn recente projecten:</p>
         <div class="projects-grid">
           <div
-            v-for="(project, index) in projects"
-            :key="index"
-            class="project-card"
-            @click="navigateTo('creations')"
-            @mouseenter="hoverProject(index)"
-            @mouseleave="resetProject"
-            :style="{ '--hover-color': project.color }"
+              v-for="(project, index) in projects"
+              :key="index"
+              class="project-card"
+              @click="navigateTo('creaties')"
+              @mouseenter="hoverProject(index)"
+              @mouseleave="resetProject"
+              :style="{ '--hover-color': project.color }"
           >
             <h3>{{ project.name }}</h3>
             <p class="project-description">{{ project.description }}</p>
@@ -103,6 +105,13 @@ export default {
     const aboutSection = ref(null)
     const expertiseSection = ref(null)
     const creationsSection = ref(null)
+
+    // Typing animation variables
+    const welcomeText = "Welkom op mijn portfolio!"
+    const introText = "Ik ben Alperen Ozcelik, een professionele Web Developer met een passie voor het creëren van uitzonderlijke websites die opvallen."
+    const typedWelcome = ref('')
+    const typedIntro = ref([])
+    const introOpacity = ref([])
 
     const expertises = ref([
       { title: 'Web Design', emoji: '🎨', color: '#FF9E9E' },
@@ -167,16 +176,44 @@ export default {
       })
     }
 
-    onMounted(() => {
-      // Hero section animatie
-      gsap.from(textContent.value.children, {
-        opacity: 0,
-        y: 20,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'power2.out'
-      })
+    // Typing animation function
+    const typeWriter = () => {
+      // Animate welcome text
+      let i = 0
+      const welcomeTimer = setInterval(() => {
+        if (i < welcomeText.length) {
+          typedWelcome.value += welcomeText.charAt(i)
+          i++
+        } else {
+          clearInterval(welcomeTimer)
+          // Start intro text animation after welcome text is done
+          typeIntroText()
+        }
+      }, 100)
 
+      // Prepare intro text array
+      typedIntro.value = introText.split('')
+      introOpacity.value = new Array(introText.length).fill(0)
+    }
+
+    // Intro text typing animation
+    const typeIntroText = () => {
+      let i = 0
+      const introTimer = setInterval(() => {
+        if (i < introText.length) {
+          introOpacity.value[i] = 1
+          i++
+        } else {
+          clearInterval(introTimer)
+        }
+      }, 20) // Faster typing speed for the longer text
+    }
+
+    onMounted(() => {
+      // Start typing animation
+      typeWriter()
+
+      // Hero section animatie
       gsap.from(imageCircle.value, {
         opacity: 0,
         scale: 0.5,
@@ -257,6 +294,9 @@ export default {
       creationsSection,
       expertises,
       projects,
+      typedWelcome,
+      typedIntro,
+      introOpacity,
       navigateTo,
       hoverExpertise,
       resetExpertise,
@@ -307,6 +347,7 @@ export default {
   background-clip: text;
   color: transparent;
   line-height: 1.2;
+  min-height: 4.5rem; /* Prevent layout shift during typing */
 }
 
 .intro-text {
@@ -314,6 +355,7 @@ export default {
   line-height: 1.6;
   color: #555;
   margin-bottom: 30px;
+  min-height: 3.6rem; /* Prevent layout shift during typing */
 }
 
 .story-button {

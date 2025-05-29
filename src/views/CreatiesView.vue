@@ -247,7 +247,8 @@
             <div class="deliverable-links">
               <a href="https://github.com/PXL-WPL2-2425/wpl2-frontend-team_10.git" class="deliverable-link">Bekijk Live Website</a>
               <a href="#" class="deliverable-link">Download Documentatie</a>
-              <a href="../assets/projecten/E-taalent%20pitch%20&%20demo.pptx" class="deliverable-link" download="E-taalent_pitch_&_demo.pptx">Bekijk Presentatie</a>
+              <a href="../../public/projecten/E-taalent%20pitch%20&%20demo.pptx" class="deliverable-link" download="E-taalent_pitch_&_demo.pptx">Bekijk Presentatie</a>
+              <a href="../../public/projecten/Individuele_eindreflectie.pdf" class="deliverable-link" download="Individuele_eindreflectie.pdf">Individuele eindreflectie</a>
             </div>
           </div>
         </div>
@@ -456,12 +457,33 @@ export default {
           ]
         },
         {
-          id: 7,
+          id: 6,
           title: 'BCS Butterfly Logo Ontwerp',
           description: 'Ik heb een modern en herkenbaar logo ontworpen voor BCS Butterfly, een lokaal Voedselfabrikant. Het logo moest zowel elegant als tijdloos zijn, met een subtiele verwijzing naar een vlinder (Butterfly) in het ontwerp. Na verschillende iteraties en feedbackrondes met de klant, is het eindresultaat een minimalistisch logo geworden dat goed werkt op zowel kleine als grote schaal. Het logo is geoptimaliseerd voor verschillende toepassingen, zoals visitekaartjes, verpakkingen en digitale media.',
           technologies: 'Adobe Photoshop, Canva, Figma',
-          image: 'bcs.png',
-        }
+          image: 'bcs.png'
+        },
+        {
+          id: 7,
+          title: 'DR-Tuinen Website',
+          description: 'Voor DR-Tuinen, een tuinaannemer gespecialiseerd in tuinaanleg, onderhoud en renovatie, heb ik een volledige website ontwikkeld. De website toont hun diensten, recente projecten en contactinformatie. Ik heb een schone, gebruiksvriendelijke interface ontworpen die goed werkt op zowel desktop als mobiele apparaten. De website is responsive en laadt snel, wat belangrijk is voor hun klanten die vaak op locatie willen zien wat DR-Tuinen te bieden heeft.',
+          technologies: 'HTML, CSS',
+          image: 'dr-tuinen.jpg',
+          links: [
+            {
+              url: 'https://www.dr-tuinen.be/',
+              text: 'Bekijk Website',
+              class: 'demo-link'
+            }
+          ]
+        },
+        {
+          id: 8,
+          title: 'Haribo Snoep Reclame',
+          description: 'Voor een campagne in Albert Heijn heb ik meegewerkt aan het ontwerpen van promotiemateriaal voor Haribo snoep. Mijn taak was het creëren van aantrekkelijke visuals die de aandacht trekken in de winkel. Ik heb gewerkt aan verschillende ontwerpen voor posters, displays en digitale banners, met focus op de vrolijke en kleurrijke identiteit van Haribo. Het was een uitdagend project omdat de ontwerpen zowel kinderen als volwassenen moesten aanspreken, en tegelijkertijd duidelijk moesten communiceren over acties en aanbiedingen.',
+          technologies: 'Adobe Illustrator, Photoshop',
+          image: 'Haribo.jpg'
+        },
       ]
     }
   },
