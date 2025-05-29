@@ -202,7 +202,7 @@ export default {
 
     function downloadCV() {
       const link = document.createElement('a')
-      link.href = 'public/projecten/ozcelik_alperen_cv.pdf' // Let op: géén 'public' in de URL
+      link.href = '/projecten/ozcelik_alperen_cv.pdf' // Let op: géén 'public' in de URL
       link.download = 'ozcelik_alperen_cv.pdf'
       document.body.appendChild(link)
       link.click()
